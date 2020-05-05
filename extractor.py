@@ -44,8 +44,8 @@ def getQuestions():
 if __name__ == "__main__":
 	r = requests.get("https://cses.fi/problemset/").content
 	soup = BeautifulSoup(r,'html.parser')
-	username = ''
-	password = ''
+	username = input('username: ')
+	password = input('passowrd: ')
 	session = createSession(username, password)
 	questions = getQuestions()
 	for _ in questions:
